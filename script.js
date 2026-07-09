@@ -7,10 +7,10 @@ let menu = document.getElementById("menu");
 btn.addEventListener("click", function() {
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
-        icon.src = "./light_mode_icon.svg";
         menu.src = "./white_menu_icon.svg";
-    } else {
         icon.src = "./dark_mode_icon.svg";
+    } else {
+        icon.src = "./light_mode_icon.svg";
         menu.src = "./menu_icon.svg";
     }
 });

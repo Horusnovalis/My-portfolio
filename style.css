@@ -1,17 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root{
-    --primary-color:#ff8800;
-    --secondary-color:#ff9800;
+    --primary-color: #7c3aed;
+    --secondary-color: #8b5cf6;
     --text-color:#11152b;
-    --background-color:#fff;
+
+    --background-color:linear-gradient(
+        120deg,
+        #ffffff,
+        #f1f5f9,
+        #dbeafe
+    );
 }
 
-.dark{
-    --primary-color:#ff8800;
-    --secondary-color:#ff9800;
-    --text-color:#fff;
-    --background-color:#11152b;
+body.dark{
+    --primary-color: #7c3aed;
+    --secondary-color: #8b5cf6;
+    --text-color:#ffffff;
+
+    --background-color:linear-gradient(
+        120deg,
+        #0f172a,
+        #1e293b,
+        #172554
+    );
 }
 
 *{
@@ -34,6 +46,11 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
+    position:fixed;
+    width:100%;
+    z-index:100;
+    background:var(--background-color)/70px;
+    backdrop-filter: blur(40px);
 }
 
 .logo{
@@ -68,8 +85,12 @@ header a:hover{
     align-items:center;
     justify-content:center;
     cursor:pointer;
-    background:none;
+    background:var(--background-color);
     border: 1px solid var(--text-color);
+}
+
+#btn:hover{
+    background:var(--background-color);
 }
 
 .primary_button{
@@ -77,7 +98,7 @@ header a:hover{
     background:var(--primary-color);
     border:none;
     border-radius:40px;
-    color:var(--text-color);
+    color:white;
     cursor:pointer;
     font-weight:600;
     transition:.3s;
@@ -106,6 +127,7 @@ header button:hover{
     width:100%;
     height:90vh;
     padding:5% 8%;
+    padding-top:100px;
 }
 
 .hero-text{
@@ -139,11 +161,69 @@ header button:hover{
 }
 
 .hero-image{
-    width:300px;
-    height:300px;
+    width:400px;
+    height:400px;
     background-image: url(./Photo_passeport.jpg);
     background-size: cover;
-    border:1px solid var(--text-color);
+}
+
+.about{
+    width:100%;
+    height: 90vh;
+    padding:50px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.about-left{
+    width:50%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:start;
+    gap:30px;
+}
+
+.about-left h4{
+    font-size:1.5rem;
+    color:var(--primary-color);
+    font-weight:900;
+}
+
+.about-right{
+    width:50%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px;
+}
+
+.about-container{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.about-box{
+    width:50%;
+    height:50%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+}
+
+.about-box h1{
+    font-size:2rem;
+    color:var(--primary-color);
+    font-weight:900;
 }
 
 @media(max-width:768px){
@@ -183,7 +263,8 @@ header button:hover{
     }
 
     .hero{
-        flex-direction:column;
+        flex-direction:column-reverse;
+        gap:50px;
         height:auto;
         padding:50px 5%;
     }
@@ -196,5 +277,26 @@ header button:hover{
     .hero-right{
         width:100%;
         padding:0;
+    }
+
+    .about{
+        flex-direction:column-reverse;
+        gap:50px;
+        height:auto;
+        padding:50px 5%;
+    }
+
+    .about-left{
+        width:100%;
+        align-items:center;
+        text-align:center;
+    }
+
+    .about-right{
+        width:100%;
+    }
+
+    .about-box{
+        margin:20px 0;
     }
 }
