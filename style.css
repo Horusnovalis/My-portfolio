@@ -417,4 +417,40 @@ header button:hover{
         width:100%;
         margin:10px;
     }
+
+    .skills{
+
+        min-height:auto;
+
+        padding:50px 5%;
+    }
+
+    .skills-title{
+
+        text-align:center;
+
+        align-items:center;
+    }
+
+    .skills-title p{
+
+        max-width:100%;
+    }
+
+    .skills-container{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+    }
+
+    .skill-info{
+
+        font-size:.95rem;
+    }
+
+    .progress{
+
+        height:8px;
+    }
 }
