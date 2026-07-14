@@ -423,6 +423,16 @@ textarea:focus{
     outline: none;
 }
 
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
 @media(max-width:768px){
     header{
         padding:20px 5%;
@@ -524,7 +534,6 @@ textarea:focus{
     .skills-title{
 
         text-align:center;
-
         align-items:center;
     }
 
@@ -536,7 +545,6 @@ textarea:focus{
     .skills-container{
 
         grid-template-columns:1fr;
-
         gap:25px;
     }
 
@@ -553,14 +561,12 @@ textarea:focus{
     .contact{
 
     height:auto;
-
     padding:100px 20px;
     }
 
     .contact-content{
 
         flex-direction:column;
-
         gap:50px;
     }
 
@@ -568,7 +574,6 @@ textarea:focus{
     .right-contact{
 
         width:100%;
-
         height:auto;
     }
 
@@ -580,5 +585,17 @@ textarea:focus{
     form button{
 
         width:100%;
+    }
+
+    footer{
+
+    text-align:center;
+    padding:20px;
+    height:auto;
+    }
+
+    footer span{
+
+        font-size:14px;
     }
 }
