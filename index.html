@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body id="body">
     <header>
         <div class="logo">DevPortfolio</div>
             <ul id="nav-links" class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div id="btn">
                 <img id="icon" src="./light_mode_icon.svg" alt="Light Mode Icon">
             </div>
             <img id="menu" src="./menu_icon.svg" alt="Menu Icon">
     </header>
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-text">
                 <p>Hello, I'm Bianga Andy</p>
                 <h1>Frontend Developer</h1>
@@ -38,7 +41,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-left">
             <div class="about-title">
                 <h4>About Me</h4>
@@ -68,7 +71,7 @@
             </div>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="service-title">
             <h4>Services</h4>
             <h1>What I do, end to end</h1>
@@ -92,13 +95,10 @@
         </div>
     </section>
 
-<section class="skills">
-
-    <div class="section-title">
-        <h1>My Skills</h1>
-        <p>
-            My technical expertise and professional journey.
-        </p>
+<section class="skills" id="skills">
+    <div class="skill-title">
+        <h4>Skills</h4>
+        <h1>My technical expertise and <br> professional journey.</h1>
     </div>
 
     <div class="skills-container">
@@ -159,37 +159,34 @@
     <section class="contact" id="contact">
         <div class="contact-content">
             <div class="left-contact">
-                <h3>Contact Me</h3>
-                <h1>Get in touch</h1>
+                <div class="contact-title">
+                    <h4>Contact Me</h4>
+                    <h1>Get in touch</h1>
+                </div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut eaque sequi ab suscipit aliquid reiciendis.</p>
                 <div class="icon-contact">
                     <div class="icon-boxes">
-                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-light fa-phone"></i>
                         <span>+243 855 705 096</span>
                     </div>
                     <div class="icon-boxes">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-light fa-envelope"></i>
                         <span>biangawaruziandy24@gmail.com</span>
                     </div>
                     <div class="icon-boxes">
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class="fa-light fa-location-dot"></i>
                         <span>Goma, RDC</span>
                     </div>
                 </div>
-                <div class="socialmedia">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </div>
+                
             </div>
             <div class="right-contact">
-                <h1>Send a Message</h1>
+                <h4>Send a Message</h4>
                 <form action="">
                     <input type="text" placeholder="Name">
                     <input type="email" placeholder="Email">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button type="submit">Send Message</button>
+                    <button class="primary_button">Send Message</button>
                 </form>
             </div>
         </div>
