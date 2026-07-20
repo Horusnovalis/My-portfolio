@@ -586,6 +586,7 @@ footer{
         gap:50px;
         height:auto;
         padding:50px 5%;
+        padding-top: 140px;
     }
 
     .hero-text{
@@ -599,24 +600,34 @@ footer{
     }
 
     .about{
-        flex-direction:column-reverse;
+        flex-direction:column;
+        text-align: center;
         gap:50px;
         height:auto;
         padding:50px 5%;
     }
 
-    .about-left{
-        width:100%;
-        align-items:start;
-        text-align:start;
+    .about-image{
+        width: 100%;
     }
 
-    .about-right{
-        width:100%;
+    .about-content{
+        width: 100%;
+        align-items: center;
     }
 
-    .about-box{
-        margin:20px 0;
+    .card-top{
+        left: 0px;
+        top: -35px;
+    }
+
+    .card-bottom{
+        right: 0px;
+        bottom: -15px;
+    }
+
+    .about-content h2{
+        font-size:2.2rem;
     }
 
     .services{
