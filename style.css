@@ -802,19 +802,16 @@ footer{
     }
 
     form button{
-
         width:100%;
     }
 
     footer{
-
     text-align:center;
     padding:20px;
     height:auto;
     }
 
     footer span{
-
         font-size:14px;
     }
 }
