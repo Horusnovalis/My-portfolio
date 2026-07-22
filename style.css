@@ -3,22 +3,24 @@
 :root{
     --primary-color: #8b5cf6;
     --primary-hover: #7c3aed;
-    --background-color: #fff;
+    --background-color: #ffffff;
     --surface-color: #f8fafc;
     --text-color: #111827;
     --text-secondary: #627280;
     --border-color: #e5e7eb;
     --transition: all 0.3s ease;
-    --box-shadow:0px 8px 16px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 body.dark{
     --primary-color: #7c3aed;
-    --secondary-color: #8b5cf6;
-    --text-color:#f9f1fb;
+    --primary-hover: #8b5cf6;
+    --background-color: #0f0f17;
+    --surface-color: #181824;
+    --text-color: #f9f1fb;
     --text-secondary: #9ca3af;
     --border-color: #8b5cf6;
-    --background-color: #0f0f17;
+    --box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.45);
 }
 
 *{
@@ -127,6 +129,11 @@ header a:hover{
 header button:hover{
     transform:translateY(-3px);
     box-shadow:0 0 15px var(--primary-color);
+}
+
+p{
+    color: var(--text-secondary);
+    letter-spacing: 1px;
 }
 
 .hero{
@@ -363,6 +370,15 @@ header button:hover{
     }
 }
 
+.service-box h3{
+    color: var(--text-color);
+}
+
+.service-box p{
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
 .projects{
     width:100%;
     height:auto;
@@ -391,12 +407,14 @@ header button:hover{
 .project-title h1{
     font-size:2rem;
     font-weight:900;
+    color: var(--text-color);
 }
 
 .project-title p{
     width:60%;
     color:var(--text-secondary);
     line-height:1.8;
+    letter-spacing: 1px;
 }
 
 .projects-container{
@@ -611,6 +629,44 @@ header button:hover{
     gap: 10px;
 }
 
+.media{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.media-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #8b5cf6; */
+    border-radius: 50%;
+
+    i{
+        color: var(--primary-color);
+    }
+}
+
+.contact-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b5cf63d;
+    border-radius: 50%;
+
+    i{
+        color: var(--primary-color);
+    }
+}
+
+i:hover{
+    color: var(--primary-hover);
+}
 
 form{
     display: flex;
@@ -632,7 +688,7 @@ form{
 input{
     padding: 15px;
     background-color: transparent;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--text-secondary);
     color: var(--text-color);
     border-radius: 10px;
 }
@@ -643,7 +699,7 @@ input:focus{
 textarea{
     padding: 10px;
     background-color: transparent;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--text-secondary);
     color: var(--text-color);
     border-radius: 10px;
 }
