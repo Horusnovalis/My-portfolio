@@ -76,3 +76,49 @@ const observer = new IntersectionObserver(
 if(aboutStats) {
     observer.observe(aboutStats);
 }
+
+const sections = document.querySelectorAll("section")
+const links = document.querySelectorAll(".nav-links a")
+
+window.addEventListener ("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 250;
+
+        if(scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    links.forEach((link) => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
+const progressBar = document.querySelectorAll(".progress-bar");
+const skillsSection = document.querySelector(".skills");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                progressBar.forEach((bar) => {
+                    const width = bar.dataset.width;
+                    bar.style.width = `$(width)%`;      
+                });
+
+                observer.unobserve(skillsSection);
+            }
+        });
+    },
+    {
+        threshold: 0.5,
+    },
+);
+
+observer.observe(skillsSection);
