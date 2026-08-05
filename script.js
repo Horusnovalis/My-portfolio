@@ -103,16 +103,16 @@ window.addEventListener ("scroll", () => {
 const progressBar = document.querySelectorAll(".progress-bar");
 const skillsSection = document.querySelector(".skills");
 
-const observer = new IntersectionObserver(
+const skillsObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 progressBar.forEach((bar) => {
                     const width = bar.dataset.width;
-                    bar.style.width = `$(width)%`;      
+                    bar.style.width = `${width}%`;      
                 });
 
-                observer.unobserve(skillsSection);
+                skillsObserver.unobserve(skillsSection);
             }
         });
     },
@@ -121,4 +121,4 @@ const observer = new IntersectionObserver(
     },
 );
 
-observer.observe(skillsSection);
+skillsObserver.observe(skillsSection);
