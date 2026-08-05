@@ -541,32 +541,14 @@ p{
 }
 
 .progress-bar{
-
-    height:0;
+    width: 0;
+    height:100%;
     background:var(--primary-color);
     border-radius:10px;
     transition: width 1s ease;
 }
 
-.html{
 
-    width:95%;
-}
-
-.css{
-
-    width:90%;
-}
-
-.js{
-
-    width:75%;
-}
-
-.react{
-
-    width:60%;
-}
 
 .contact{
     width: 100%;
